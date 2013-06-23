@@ -1,0 +1,37 @@
+{
+    "name": "Media File",
+    "slug": "mediafiles",
+    "version": "0.0.1",
+    "core_version": "0.0.1",
+    "type": "module",
+    "description": "Media File module provides an interface to upload files and make them public available.",
+    "keywords": ["downloads","files"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jefferson Costella",
+            "email": "jeff@localhost",
+            "role": "Lead Developer"
+        }
+    ],
+    "options": {
+            "handles": "mediafiles",
+            "auto": true
+    },
+    "required":[
+        {
+            "name": "thumbnails",
+            "version": "0.0.1"
+        }
+    ],
+    "menu": [
+        {
+            "main_menu" : "Media",
+            "title"     : "Files",
+            "url"       : "mediafiles",
+            "class"     : "",
+            "li_class"  : "",
+            "children"  : []
+        }
+    ]
+}
