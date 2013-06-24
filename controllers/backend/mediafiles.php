@@ -22,7 +22,7 @@ class Mediafiles_Backend_Mediafiles_Controller extends Admin_Controller {
     {
         $this->data['section_bar_active'] = Lang::line('mediafiles::lang.Files')->get(ADM_LANG);
 
-        $this->data['records'] = \Mediafiles\Model\File::where_status(1)->get();
+        $this->data['records'] = \Mediafiles\Model\File::order_by('order', 'asc')->get();
 
         return $this->theme->render('mediafiles::backend.files.index', $this->data);
     }
@@ -177,6 +177,7 @@ class Mediafiles_Backend_Mediafiles_Controller extends Admin_Controller {
             $mediafile->name        = $post_data['name'];
             $mediafile->description = $post_data['description'];
             $mediafile->version     = $post_data['version'];
+            $mediafile->status      = $post_data['status'];
             $mediafile->save();
 
             $this->data['message']      = __('mediafiles::lang.Custom avatar was successfully created')->get(ADM_LANG);
