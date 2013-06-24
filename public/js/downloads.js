@@ -18,7 +18,7 @@ $(document).ready(function() {
             return $helper;
         },
         update: function(e, ui) {
-            href = SITE_URL + ADM_URI + 'downloads/ajax/sort';
+            href = SITE_URL + ADM_URI + 'mediafiles/ajax/sort';
 
             sorted = new Array();
             
