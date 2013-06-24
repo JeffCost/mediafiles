@@ -70,7 +70,7 @@ class Mediafiles_Backend_Mediafiles_Controller extends Admin_Controller {
             if($this->has_data($post_data, 'image'))
             {
                 $image_path      = Config::get('mediafiles::settings.image_path');
-                $image_name      = Opensim\UUID::random();
+                $image_name      = \Opensim\UUID::random();
                 $image_ext       = '.'.get_file_extension($post_data['image']['name']);
                 $image_full_name =  $image_name.$image_ext;
                 $image           = Input::upload('image', $image_path, $image_full_name);
